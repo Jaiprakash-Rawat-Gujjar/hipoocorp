@@ -9,7 +9,7 @@ function Header() {
 
       <img
         id="logo"
-        src="./src/hipoo.png"
+        src="/hipoo.png"
         alt="Hipoo Corporation Logo"
       />
 
