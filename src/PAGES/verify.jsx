@@ -60,7 +60,7 @@ function Verify() {
       university: "GURU JAMBHESHWAR UNIVERSITY OF SCIENCE AND TECHNOLOGY",
       program: "Web Development with JS & Web Design",
       duration: "5 Weeks",
-      certificateImage: "./src/mandeep cert.png"
+      certificateImage: "./src/assets/mohak cert.jpeg"
     },
   };
 
