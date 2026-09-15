@@ -1,0 +1,251 @@
+import { useState } from "react";
+
+function Verify() {
+  const [certificate, setCertificate] = useState(null);
+  const [error, setError] = useState("");
+
+  const certificates = {
+    HIPOOCERT001: {
+      name: "Mandeep",
+      email: "mandeep@example.com",
+      university: "GURU JAMBHESHWAR UNIVERSITY OF SCIENCE AND TECHNOLOGY",
+      program: "Web Development with JS & Web Design",
+      duration: "5 Weeks",
+      certificateImage: "./src/mandeep cert.png"
+    },
+
+    HIPOOCERT002: {
+      name: "Ritesh",
+      email: "ritesh@example.com",
+      university: "GURU JAMBHESHWAR UNIVERSITY OF SCIENCE AND TECHNOLOGY",
+      program: "Web Development with JS & Web Design",
+      duration: "6 Weeks",
+      certificateImage: "/certificates/ritesh.png"
+    },
+     HIPOOCERT003: {
+      name: "Jaiprakash",
+      email: "jpgujjarr@gmail.com",
+      university: "GURU JAMBHESHWAR UNIVERSITY OF SCIENCE AND TECHNOLOGY",
+      program: "Web Development with JS & Web Design",
+      duration: "5 Weeks",
+      certificateImage: "./src/mandeep cert.png"
+    },
+     HIPOOCERT004: {
+      name: "Rahul",
+      email: "rahul@example.com",
+      university: "GURU JAMBHESHWAR UNIVERSITY OF SCIENCE AND TECHNOLOGY",
+      program: "Web Development with JS & Web Design",
+      duration: "5 Weeks",
+      certificateImage: "./src/mandeep cert.png"
+    },
+     HIPOOCERT004: {
+      name: "Sachin",
+      email: "sachingurjar5435651@gmail.com",
+      university: "GURU JAMBHESHWAR UNIVERSITY OF SCIENCE AND TECHNOLOGY",
+      program: "Web Development with JS & Web Design",
+      duration: "5 Weeks",
+      certificateImage: "./src/mandeep cert.png"
+    },
+     HIPOOCERT005: {
+      name: "Nitesh",
+      email: "mandeep@example.com",
+      university: "GURU JAMBHESHWAR UNIVERSITY OF SCIENCE AND TECHNOLOGY",
+      program: "Web Development with JS & Web Design",
+      duration: "5 Weeks",
+      certificateImage: "./src/mandeep cert.png"
+    },
+  };
+
+  const handleVerify = (e) => {
+    e.preventDefault();
+
+    const enteredId = e.target.certificateId.value
+      .trim()
+      .toUpperCase();
+
+    if (certificates[enteredId]) {
+      setCertificate({
+        id: enteredId,
+        ...certificates[enteredId]
+      });
+
+      setError("");
+    } else {
+      setCertificate(null);
+      setError("Invalid Certificate ID");
+    }
+  };
+
+  return (
+    <div className="verify-page">
+
+      {/* Header */}
+      <div className="verify-hero">
+        <span className="verify-label">
+          HIPOO CORPORATION
+        </span>
+
+        <h1>Certificate Verification</h1>
+
+        <p>
+          Verify the authenticity of a certificate issued by
+          Hipoo Corporation.
+        </p>
+      </div>
+
+      {/* Verification Box */}
+      <div className="verify-container">
+
+        <div className="verify-card">
+
+          <div className="verify-icon">
+            ✓
+          </div>
+
+          <h2>Verify Your Certificate</h2>
+
+          <p className="verify-description">
+            Enter the certificate ID provided on your certificate
+            to verify its authenticity.
+          </p>
+
+          <form onSubmit={handleVerify} className="verify-form">
+
+            <label>
+              Certificate ID
+            </label>
+
+            <input
+              type="text"
+              name="certificateId"
+              placeholder="e.g. HIPOOCERT001"
+              required
+            />
+
+            <button type="submit">
+              Verify Certificate
+            </button>
+
+          </form>
+
+          {/* Invalid */}
+          {error && (
+            <div className="verification-error">
+              <div className="status-symbol">✕</div>
+
+              <div>
+                <strong>Invalid Certificate</strong>
+                <p>
+                  The Certificate ID entered could not be verified.
+                  Please check the ID and try again.
+                </p>
+              </div>
+            </div>
+          )}
+
+          {/* Verified */}
+          {certificate && (
+            <div className="verification-success">
+
+              <div className="success-header">
+                <div className="success-symbol">
+                  ✓
+                </div>
+
+                <div>
+                  <strong>Certificate Verified</strong>
+                  <p>
+                    This certificate has been successfully verified.
+                  </p>
+                </div>
+              </div>
+
+              <div className="certificate-details">
+
+                <div className="detail-row">
+                  <span>Certificate ID</span>
+                  <strong>{certificate.id}</strong>
+                </div>
+
+                <div className="detail-row">
+                  <span>Intern Name</span>
+                  <strong>{certificate.name}</strong>
+                </div>
+
+                <div className="detail-row">
+                  <span>Email</span>
+                  <strong>{certificate.email}</strong>
+                </div>
+
+                <div className="detail-row">
+                  <span>University / College</span>
+                  <strong>{certificate.university}</strong>
+                </div>
+
+                <div className="detail-row">
+                  <span>Program</span>
+                  <strong>{certificate.program}</strong>
+                </div>
+
+                <div className="detail-row">
+                  <span>Duration</span>
+                  <strong>{certificate.duration}</strong>
+                </div>
+
+              </div>
+
+              {/* Certificate */}
+              <div className="certificate-preview">
+
+                <h3>Certificate Preview</h3>
+
+                <img
+                  src={certificate.certificateImage}
+                  alt="Verified Certificate"
+                />
+
+              </div>
+
+            </div>
+          )}
+
+        </div>
+
+        {/* Bottom Info */}
+        <div className="verification-info">
+
+          <div>
+            <span>🔒</span>
+            <h3>Secure Verification</h3>
+            <p>
+              Certificate information is verified against
+              Hipoo Corporation records.
+            </p>
+          </div>
+
+          <div>
+            <span>✓</span>
+            <h3>Authentic Records</h3>
+            <p>
+              Only certificates issued by Hipoo Corporation
+              can be verified through this portal.
+            </p>
+          </div>
+
+          <div>
+            <span>⚡</span>
+            <h3>Instant Results</h3>
+            <p>
+              Get verification results instantly by entering
+              the certificate ID.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  );
+}
+
+export default Verify;
