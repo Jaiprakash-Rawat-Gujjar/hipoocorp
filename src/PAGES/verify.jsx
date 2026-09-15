@@ -1,83 +1,68 @@
 import { useState } from "react";
-import mandeepCert from "./assets/mandeep cert.jpeg";
-import riteshCert from "./assets/ritesh.png";
-import jaiprakashCert from "./assets/jaiprakash certificate.jpeg";
-import rahulCert from "./assets/rahul cert.jpeg";
-import sachinCert from "./assets/saschin certificate.jpeg";
-import niteshCert from "./assets/mandeep cert.png";
-import mohakCert from "./assets/mohak cert.jpeg";
 
 function Verify() {
   const [certificate, setCertificate] = useState(null);
   const [error, setError] = useState("");
 
- ```js
-const certificates = {
-  HIPOOCERT580: {
-    name: "Mandeep",
-    email: "mandeeprao2007@gmail.com",
-    university: "GURU JAMBHESHWAR UNIVERSITY OF SCIENCE AND TECHNOLOGY",
-    program: "Web Development with JS & Web Design",
-    duration: "5 Weeks",
-    certificateImage: mandeepCert
-  },
+  const certificates = {
+    HIPOOCERT580: {
+      name: "Mandeep",
+      email: "mandeeprao2007@gmail.com",
+      university: "GURU JAMBHESHWAR UNIVERSITY OF SCIENCE AND TECHNOLOGY",
+      program: "Web Development with JS & Web Design",
+      duration: "5 Weeks",
+      certificateImage: "./src/assets/mandeep cert.jpeg"
+    },
 
-  HIPOOCERT002: {
-    name: "Ritesh",
-    email: "ritesh@example.com",
-    university: "GURU JAMBHESHWAR UNIVERSITY OF SCIENCE AND TECHNOLOGY",
-    program: "Web Development with JS & Web Design",
-    duration: "6 Weeks",
-    certificateImage: riteshCert
-  },
-
-  HIPOOCERT864: {
-    name: "Jaiprakash",
-    email: "jpgujjarr@gmail.com",
-    university: "GURU JAMBHESHWAR UNIVERSITY OF SCIENCE AND TECHNOLOGY",
-    program: "Web Development with JS & Web Design",
-    duration: "5 Weeks",
-    certificateImage: jaiprakashCert
-  },
-
-  HIPOOCERT456: {
-    name: "Rahul",
-    email: "s84011447@gmail.com",
-    university: "GURU JAMBHESHWAR UNIVERSITY OF SCIENCE AND TECHNOLOGY",
-    program: "Web Development with JS & Web Design",
-    duration: "5 Weeks",
-    certificateImage: rahulCert
-  },
-
-  HIPOOCERT545: {
-    name: "Sachin",
-    email: "sachingurjar5435651@gmail.com",
-    university: "GURU JAMBHESHWAR UNIVERSITY OF SCIENCE AND TECHNOLOGY",
-    program: "Web Development with JS & Web Design",
-    duration: "5 Weeks",
-    certificateImage: sachinCert
-  },
-
-  HIPOOCERT005: {
-    name: "Nitesh",
-    email: "mandeep@example.com",
-    university: "GURU JAMBHESHWAR UNIVERSITY OF SCIENCE AND TECHNOLOGY",
-    program: "Web Development with JS & Web Design",
-    duration: "5 Weeks",
-    certificateImage: niteshCert
-  },
-
-  HIPOOCERT762: {
-    name: "Mohak",
-    email: "mohaksharma1567@gmail.com",
-    university: "GURU JAMBHESHWAR UNIVERSITY OF SCIENCE AND TECHNOLOGY",
-    program: "Web Development with JS & Web Design",
-    duration: "5 Weeks",
-    certificateImage: mohakCert
-  }
-};
-```
-
+    HIPOOCERT002: {
+      name: "Ritesh",
+      email: "ritesh@example.com",
+      university: "GURU JAMBHESHWAR UNIVERSITY OF SCIENCE AND TECHNOLOGY",
+      program: "Web Development with JS & Web Design",
+      duration: "6 Weeks",
+      certificateImage: "/certificates/ritesh.png"
+    },
+     HIPOOCERT864: {
+      name: "Jaiprakash",
+      email: "jpgujjarr@gmail.com",
+      university: "GURU JAMBHESHWAR UNIVERSITY OF SCIENCE AND TECHNOLOGY",
+      program: "Web Development with JS & Web Design",
+      duration: "5 Weeks",
+      certificateImage: "./src/assets/jaiprakash certificate.jpeg"
+    },
+     HIPOOCERT456: {
+      name: "Rahul",
+      email: "s84011447@gmail.com",
+      university: "GURU JAMBHESHWAR UNIVERSITY OF SCIENCE AND TECHNOLOGY",
+      program: "Web Development with JS & Web Design",
+      duration: "5 Weeks",
+      certificateImage: "./src/assets/rahul cert.jpeg"
+    },
+     HIPOOCERT545: {
+      name: "Sachin",
+      email: "sachingurjar5435651@gmail.com",
+      university: "GURU JAMBHESHWAR UNIVERSITY OF SCIENCE AND TECHNOLOGY",
+      program: "Web Development with JS & Web Design",
+      duration: "5 Weeks",
+      certificateImage: "./src/assets/saschin certificate.jpeg"
+    },
+     HIPOOCERT005: {
+      name: "Nitesh",
+      email: "mandeep@example.com",
+      university: "GURU JAMBHESHWAR UNIVERSITY OF SCIENCE AND TECHNOLOGY",
+      program: "Web Development with JS & Web Design",
+      duration: "5 Weeks",
+      certificateImage: "./src/mandeep cert.png"
+    },
+     HIPOOCERT762: {
+      name: "Mohak",
+      email: "mohaksharma1567@gmail.com",
+      university: "GURU JAMBHESHWAR UNIVERSITY OF SCIENCE AND TECHNOLOGY",
+      program: "Web Development with JS & Web Design",
+      duration: "5 Weeks",
+      certificateImage: "./src/assets/mohak cert.jpeg"
+    },
+  };
 
   const handleVerify = (e) => {
     e.preventDefault();
