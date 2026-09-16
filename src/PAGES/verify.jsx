@@ -5,6 +5,9 @@ import jaiprakashCert from "../assets/jaiprakash certificate.jpeg";
 import rahulCert from "../assets/rahul cert.jpeg";
 import sachinCert from "../assets/saschin certificate.jpeg";
 import mohakCert from "../assets/mohak cert.jpeg";
+import nishantCert from "../assets/NISHANT.jpeg";
+import riteshCert from "../assets/RITESH.jpeg";
+import niteshCert from "../assets/NITESH.jpeg";
 
 function Verify() {
   const [certificate, setCertificate] = useState(null);
@@ -54,7 +57,31 @@ const certificates = {
     program: "Web Development with JS & Web Design",
     duration: "5 Weeks",
     certificateImage: mohakCert
-  }
+  },
+   HIPOOCERT234: {
+    name: "Nishant",
+    email: "nishant586@gmail.com",
+    university: "GURU JAMBHESHWAR UNIVERSITY OF SCIENCE AND TECHNOLOGY",
+    program: "Web Development ",
+    duration: "5 Weeks",
+    certificateImage: nishantCert
+  },
+   HIPOOCERT290: {
+    name: "Ritesh",
+    email: "riteshyadav56@gmail.com",
+    university: "GURU JAMBHESHWAR UNIVERSITY OF SCIENCE AND TECHNOLOGY",
+    program: "Web Development ",
+    duration: "5 Weeks",
+    certificateImage: riteshCert
+  }, 
+  HIPOOCERT423: {
+    name: "Nitesh",
+    email: "niteshpilania98@gmail.com",
+    university: "GURU JAMBHESHWAR UNIVERSITY OF SCIENCE AND TECHNOLOGY",
+    program: "Web Development ",
+    duration: "5 Weeks",
+    certificateImage: niteshCert
+  },
 };
 
 
