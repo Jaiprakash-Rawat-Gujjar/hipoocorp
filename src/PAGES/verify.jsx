@@ -8,6 +8,7 @@ import mohakCert from "../assets/mohak cert.jpeg";
 import nishantCert from "../assets/NISHANT.jpeg";
 import riteshCert from "../assets/RITESH.jpeg";
 import niteshCert from "../assets/NITESH.jpeg";
+import deepCert from "../assets/deepanshu.jpeg";
 
 function Verify() {
   const [certificate, setCertificate] = useState(null);
@@ -81,6 +82,14 @@ const certificates = {
     program: "Web Development ",
     duration: "5 Weeks",
     certificateImage: niteshCert
+  },
+  HIPOOCRT421: {
+    name: "Deepanshu",
+    email: "deepanshusheoran458@gmail.com",
+    university: "GURU JAMBHESHWAR UNIVERSITY OF SCIENCE AND TECHNOLOGY",
+    program: "Web Development with JS & Web Design ",
+    duration: "5 Weeks",
+    certificateImage: deepCert
   },
 };
 
