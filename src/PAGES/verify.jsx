@@ -9,6 +9,9 @@ import nishantCert from "../assets/NISHANT.jpeg";
 import riteshCert from "../assets/RITESH.jpeg";
 import niteshCert from "../assets/NITESH.jpeg";
 import deepCert from "../assets/deepanshu.jpeg";
+import nitinCert from "../assets/nitin.jpeg";
+import sagarCert from "../assets/sasgar.jpeg";
+import sumitCert from "../assets/sumit.jpeg";
 
 function Verify() {
   const [certificate, setCertificate] = useState(null);
@@ -91,6 +94,28 @@ const certificates = {
     duration: "5 Weeks",
     certificateImage: deepCert
   },
+    HIPOOCERT3185: {
+    name: "Sagar",
+    email: "sagarsinhmar05@gmail.com",
+    university: "GURU JAMBHESHWAR UNIVERSITY OF SCIENCE AND TECHNOLOGY",
+    program: "C++",
+    duration: "4 Weeks",
+    certificateImage: sagarCert
+  },  HIPOOCERT4851: {
+    name: "Nitin Saini",
+    email: "nitinsaini2648@gmail.com",
+    university: "GURU JAMBHESHWAR UNIVERSITY OF SCIENCE AND TECHNOLOGY",
+    program: "Java",
+    duration: "4 Weeks",
+    certificateImage: nitinCert
+  },  HIPOOCERT5830: {
+    name: "Sumit",
+    email: "sumits7924@gmail.com",
+    university: "GURU JAMBHESHWAR UNIVERSITY OF SCIENCE AND TECHNOLOGY",
+    program: "C++",
+    duration: "4 Weeks",
+    certificateImage: sumitCert
+  }, 
 };
 
 
