@@ -10,7 +10,7 @@ import riteshCert from "../assets/RITESH.jpeg";
 import niteshCert from "../assets/NITESH.jpeg";
 import deepCert from "../assets/deepanshu.jpeg";
 import nitinCert from "../assets/nitin.jpeg";
-import sagarCert from "../assets/sasgar.jpeg";
+import sagarCert from "../assets/sagar.jpeg";
 import sumitCert from "../assets/sumit.jpeg";
 
 function Verify() {
